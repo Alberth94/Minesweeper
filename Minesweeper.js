@@ -106,7 +106,7 @@ function startTimer() {
     interval = setInterval(timer, 1000);
 }
 
-function stop() {
+function stopTimer() {
     clearInterval(interval);
     interval = null;
 }
@@ -208,12 +208,12 @@ function WinOrLose() {
     button.id = "button";
     if (gameStatus === bomb) {
         bombSound.play();
-        stop();
+        stopTimer();
         button.innerHTML = "You lost! 😳 Press me to play another round. 😁";
         document.body.appendChild(button);
     } else if (counter === gameStatus) {
         winSound.play();
-        stop();
+        stopTimer();
         button.innerHTML = "You Win! 😏 Press me to play another round. 😁";
         document.body.appendChild(button);
     }
