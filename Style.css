@@ -1,0 +1,63 @@
+body {
+    background-color: #663399;
+}
+ 
+h1 {
+    text-align: center;
+    color: black;
+    text-shadow: 2px 2px 5px red;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#flags {
+    border: 5px solid black;
+    color: yellow;
+    font-size: 27px;
+    font-weight: bold;
+    position: absolute;
+    top: 19%;
+    left: 58%;
+}
+.time {
+    border: 5px solid black;
+    color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 19%;
+    left: 34%; 
+}
+
+td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #9ACD32;
+    border: 2px solid #ddd;
+    box-shadow: 5px 5px black;
+}
+
+#gameBoard {
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    top: 24%;
+    left: 34%;
+}
+
+#button {
+    position: absolute;
+    top: 13%;
+    left: 36%;
+    background-color: yellowgreen;
+    border: 3px solid black;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#button {
+    cursor: pointer;
+    background-color: green;
+}
