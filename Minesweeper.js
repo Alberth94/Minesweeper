@@ -163,6 +163,17 @@ function findBombs() {
     }
 }
 
+function revealedAllBord() {
+    for (let l = 0; l <= nrLines; ++l) {
+        for (let c = 0; c <= nrColumns; ++c) {
+            if (l > -1 && l < nrLines && c > -1  && c < nrColumns && matrix[l][c] != bomb) {
+                revealedBoard[l][c].innerText = matrix[l][c];
+                revealedBoard[l][c].style = "background-color: #F0FFF0";
+            }
+        }
+    }
+}
+
 function displayNeighborhood(line, column) {
     openSpaceSound.play();
     for (let l = line - 1; l <= line + 1; ++l) {
@@ -190,17 +201,6 @@ function revealedNumber(line , column) {
     revealedBoard[line][column].innerText = matrix[line][column];
     revealedBoard[line][column].value = 1;
     revealedBoard[line][column].style = "background-color:  #F0FFF0";
-}
-
-function revealedAllBord() {
-    for (let l = 0; l <= nrLines; ++l) {
-        for (let c = 0; c <= nrColumns; ++c) {
-            if (l > -1 && l < nrLines && c > -1  && c < nrColumns && matrix[l][c] != bomb) {
-                revealedBoard[l][c].innerText = matrix[l][c];
-                revealedBoard[l][c].style = "background-color: #F0FFF0";
-            }
-        }
-    }
 }
 
 function WinOrLose() {
