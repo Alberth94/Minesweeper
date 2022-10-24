@@ -182,6 +182,16 @@ function displayNeighborhood(line, column) {
     }
 }
 
+function revealedNumber(line , column) {
+    numberSound.play();
+    if (revealedBoard[line][column].value != 1) {
+        ++counter;
+    }
+    revealedBoard[line][column].innerText = matrix[line][column];
+    revealedBoard[line][column].value = 1;
+    revealedBoard[line][column].style = "background-color:  #F0FFF0";
+}
+
 function revealedAllBord() {
     for (let l = 0; l <= nrLines; ++l) {
         for (let c = 0; c <= nrColumns; ++c) {
@@ -191,16 +201,6 @@ function revealedAllBord() {
             }
         }
     }
-}
-
-function revealedNumber(line , column) {
-    numberSound.play();
-    if (revealedBoard[line][column].value != 1) {
-        ++counter;
-    }
-    revealedBoard[line][column].innerText = matrix[line][column];
-    revealedBoard[line][column].value = 1;
-    revealedBoard[line][column].style = "background-color:  #F0FFF0";
 }
 
 function WinOrLose() {
