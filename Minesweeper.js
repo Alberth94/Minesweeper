@@ -214,7 +214,7 @@ function WinOrLose() {
     } else if (counter === gameStatus) {
         winSound.play();
         stopTimer();
-        button.innerHTML = "You Win! 😏 Press me to play another round. 😁";
+        button.innerHTML = "You won! 😏 Press me to play another round. 😁";
         document.body.appendChild(button);
     }
     button.onclick = function() {
